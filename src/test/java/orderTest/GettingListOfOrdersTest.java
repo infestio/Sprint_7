@@ -1,6 +1,6 @@
 package orderTest;
 
-import clientVault.OrderClient;
+import client.OrderClient;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Before;
 import org.junit.Test;

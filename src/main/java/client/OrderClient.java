@@ -1,4 +1,4 @@
-package clientVault;
+package client;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
@@ -10,7 +10,7 @@ public class OrderClient extends RestClient {
     private static final String ORDER_PATH = "/api/v1/orders";
     private static final String LIST_ORDERS_PATH = "/api/v1/orders";
 
-    @Step
+    @Step("Create an order using endpoint /api/v1/orders")
     public ValidatableResponse createOrder(Order order) {
         return given()
                 .log()
@@ -24,7 +24,7 @@ public class OrderClient extends RestClient {
                 .all();
     }
 
-    @Step
+    @Step("We receive a general list of orders")
     public ValidatableResponse gettingListOfOrders() {
         return given()
                 .log()

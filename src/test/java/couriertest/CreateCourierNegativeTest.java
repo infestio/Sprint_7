@@ -1,8 +1,8 @@
-package courierTest;
+package couriertest;
 
-import clientVault.Courier;
-import clientVault.CourierClient;
-import clientVault.CourierCredentials;
+import client.Courier;
+import client.CourierClient;
+import client.CourierCredentials;
 import io.qameta.allure.Description;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
@@ -46,7 +46,7 @@ public class CreateCourierNegativeTest {
 
 @Test
 @Description("If one of the fields (login/password) is missing, the endpoint returns an error")
-    public void CreateCourierWithoutOneOfParamTest() {
+    public void createCourierWithoutOneOfParamTest() {
     Courier courier = new Courier(login, password, firstName);
     ValidatableResponse createNegativeResponse = courierClient.create(courier);
     int createNegativeResponseStatusCode = createNegativeResponse.extract().statusCode();

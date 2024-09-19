@@ -1,8 +1,8 @@
-package courierTest;
+package couriertest;
 
-import clientVault.Courier;
-import clientVault.CourierClient;
-import clientVault.CourierCredentials;
+import client.Courier;
+import client.CourierClient;
+import client.CourierCredentials;
 import io.qameta.allure.Description;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;

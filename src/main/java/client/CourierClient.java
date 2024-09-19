@@ -1,4 +1,4 @@
-package clientVault;
+package client;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
@@ -11,7 +11,7 @@ public class CourierClient extends RestClient {
     private static final String LOGIN_PATH = "/api/v1/courier/login";
     private static final String DELETE_PATH = "/api/v1/courier/";
 
-    @Step
+    @Step("Create a courier using endpoint /api/v1/courier")
     public ValidatableResponse create(Courier courier) {
         return given()
                 .log()
@@ -25,7 +25,7 @@ public class CourierClient extends RestClient {
                 .all();
     }
 
-    @Step
+    @Step("Login the courier using endpoint /api/v1/courier/login")
     public ValidatableResponse login(CourierCredentials courierCredentials) {
         return given()
                 .log()
@@ -39,7 +39,7 @@ public class CourierClient extends RestClient {
                 .all();
     }
 
-    @Step
+    @Step("Removing a courier using ID")
     public ValidatableResponse delete(int courierId) {
         return given()
                 .log()

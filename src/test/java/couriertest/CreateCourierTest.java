@@ -1,8 +1,9 @@
-package courierTest;
+package couriertest;
 
-import clientVault.Courier;
-import clientVault.CourierClient;
-import clientVault.CourierCredentials;
+import client.Courier;
+import client.CourierClient;
+import client.CourierCredentials;
+import client.CourierGenerator;
 import io.qameta.allure.Description;
 import io.qameta.allure.Issue;
 import io.restassured.response.ValidatableResponse;
@@ -21,7 +22,7 @@ public class CreateCourierTest {
     @Before
     public void setUp() {
         courierClient = new CourierClient();
-        courier = new Courier("Рокки", "1234", "Слай");
+        courier = CourierGenerator.getRandom();
     }
 
     @After

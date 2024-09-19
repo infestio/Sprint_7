@@ -1,4 +1,4 @@
-package clientVault;
+package client;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.*;

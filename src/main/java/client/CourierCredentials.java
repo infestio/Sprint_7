@@ -1,4 +1,4 @@
-package clientVault;
+package client;
 
 public class CourierCredentials {
 

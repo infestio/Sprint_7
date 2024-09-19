@@ -1,7 +1,7 @@
 package orderTest;
 
-import clientVault.Order;
-import clientVault.OrderClient;
+import client.Order;
+import client.OrderClient;
 import io.qameta.allure.Description;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Before;
