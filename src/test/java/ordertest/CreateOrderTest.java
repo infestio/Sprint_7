@@ -1,4 +1,4 @@
-package orderTest;
+package ordertest;
 
 import client.Order;
 import client.OrderClient;
